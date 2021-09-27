@@ -19,9 +19,10 @@ function LegacyLink() {
         });
         const hiddenElement = document.createElement("a");
         hiddenElement.href = "data:text/csv;charset=utf-8," + encodeURI(csv);
+        console.log(hiddenElement.href);
         hiddenElement.target = "_blank";
         hiddenElement.download = "csv file.csv";
-        hiddenElement.click();
+        // hiddenElement.click();
       })
       .catch((err) => {});
   };
